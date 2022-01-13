@@ -1,73 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webshop</title>
-</head>
-<body>
-  <ul>
-    <li>Phones</li>
-    <li>Cases</li>
-    <li>Chargers</li>
-    <li>Screen protectors</li>
-  </ul>
-  <p>The best sold brands</p>
-  <ol>
-    <li>Samsung</li>
-    <li>Apple</li>
-    <li>OnePlus</li>
-    <li>Huawai</li>
-    <li>Nokia</li>
-    <li>LG</li>
-  </ol>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Webshop</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 id="title">WebuDesuka</h1>
+        <a href="#upcoming" class="nav-link">Upcoming</a>
+        <a href="#accessoires" class="nav-link">Accessoires</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="nav-link">Video</a>
+      </nav>
+    </header>
 
+    <section>
+      <ul>
+        <li>Phones</li>
+        <li>Cases</li>
+        <li>Chargers</li>
+        <li>Screen protectors</li>
+      </ul>
+    </section>
+    
+    <section>
+      <ol>
+        <p>The<a href="https://www.mbaskool.com/fun-corner/top-brand-lists/17610-top-10-global-mobile-phone-brands.html">best</a>sold mobile brands in 2021</p>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Apple</li>
+        <li>Xiaomi</li>
+        <li>Oppo</li>
+        <li>vivo</li>
+        <li>LG</li>
+        <li>ZTE</li>
+        <li>Lenovo</li>
+        <li>Realme</li>
+      </ol>
+    </section>
 
-  <table>
-    <caption>The top 5 best sold phones</caption>
-  <tr>
-    <th>Brand</th>
-    <th>Model</th>
-    <th>OS</th>
-    <th>screensize</th>
-    <th>Image</th>
-  </tr>
-  <tr>
-    <td>Apple</td>
-    <td>Iphone 13</td>
-    <td>IoS</td>
-    <td><em>6.1 inches</em></td>
-    <td><em><!--Picture--></em></td>
-  </tr>
-  <tr>
-    <td>Apple</td>
-    <td>Iphone X</td>
-    <td>IoS</td>
-    <td><em>5.85 inches</em></td>
-    <td><em><!--Picture--></em></td>
-  </tr>
-  <tr>
-    <td>Samsung</td>
-    <td>Galaxy S21</td>
-    <td>Andriod</td>
-    <td><em>6.2 inches</em></td>
-    <td><em><!--Picture--></em></td>
-  </tr>
-  <tr>
-    <td>OnePlus</td>
-    <td>9</td>
-    <td>Andriod</td>
-    <td>6.55 inches</td>
-    <td><img alt="OnePlus 9" scr=""></td>
-  </tr>
-  <tr>
-    <td>Nokia</td>
-    <td>X20</td>
-    <td>Andriod</td>
-    <td>6.67 inches</td>
-    <td><img src="" alt="Nokia X20"></td>
-  </tr>
-  </table>
-</body>
+    <table>
+      <caption>
+        The top 5 best sold phones
+      </caption>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>OS</th>
+        <th>screensize</th>
+        <th>Image</th>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Iphone 13</td>
+        <td>IoS</td>
+        <td><em>6.1 inches</em></td>
+        <td>
+          <em><!--Picture--></em>
+        </td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>Iphone X</td>
+        <td>IoS</td>
+        <td><em>5.85 inches</em></td>
+        <td>
+          <em><!--Picture--></em>
+        </td>
+      </tr>
+      <tr>
+        <td>Samsung</td>
+        <td>Galaxy S21</td>
+        <td>Andriod</td>
+        <td><em>6.2 inches</em></td>
+        <td>
+          <em><!--Picture--></em>
+        </td>
+      </tr>
+      <tr>
+        <td>OnePlus</td>
+        <td>9</td>
+        <td>Andriod</td>
+        <td>6.55 inches</td>
+        <td><img alt="OnePlus 9" scr="" /></td>
+      </tr>
+      <tr>
+        <td>Nokia</td>
+        <td>X20</td>
+        <td>Andriod</td>
+        <td>6.67 inches</td>
+        <td><img src="" alt="Nokia X20" /></td>
+      </tr>
+    </table>
+    <div class="container">
+      <div class="wrapper" id="upcoming">
+        <h2>Upcoming</h2>
+        <div class="textblock">
+          <h3>NEW PHONE COMING INTO OUR STOCKS SOON</h3>
+        </div>
+        <div class="block">
+          <img src="https://static.iphoned.nl/orca/products/14257/apple-iphone-14-pro.jpg" alt="iPhone 14" class="phone-img">
+          <div class="phone-container">
+            <h3>iPhone 14</h3>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lorem sed risus pulvinar iaculis. Donec ac suscipit ligula. Duis mattis, ante eu egestas ultricies, eros est pellentesque velit, non aliquam dolor quam eget diam. Morbi lacinia urna ipsum, quis scelerisque velit ultrices scelerisque. Phasellus eu augue orci.</p>
+            <div class="specify">
+              <p>Price: 1015$</p>
+              <button>Pre-order</button>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="phone-container middle-container">
+            <h3>OnePlus 10</h3>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lorem sed risus pulvinar iaculis. Donec ac suscipit ligula. Duis mattis, ante eu egestas ultricies, eros est pellentesque velit, non aliquam dolor quam eget diam. Morbi lacinia urna ipsum, quis scelerisque velit ultrices scelerisque. Phasellus eu augue orci.</p>
+            <div class="specify">
+              <p>Price: 880$</p>
+              <button>Pre-order</button>
+            </div>
+          </div>
+          <img src="https://www.mobileghor.com/wp-content/uploads/2020/09/OnePlus-8-Pro-Glacial-Green.jpg" alt="OnePus 10" class="phone-img middle-image">
+        </div>
+        <div class="block">
+          <img src="https://static.androidplanet.nl/orca/products/9291/nokia-x10.jpg" alt="Nokia 10" class="phone-img">
+          <div class="phone-container">
+            <h3>Nokia 10</h3>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae lorem sed risus pulvinar iaculis. Donec ac suscipit ligula. Duis mattis, ante eu egestas ultricies, eros est pellentesque velit, non aliquam dolor quam eget diam. Morbi lacinia urna ipsum, quis scelerisque velit ultrices scelerisque. Phasellus eu augue orci.</p>
+            <div class="specify">
+              <p>Price: 945$</p>
+              <button>Pre-order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper" id="accessoires">
+        <h2>Accessoires</h2>
+      </div>
+      
+      <div class="wrapper" id="contact">
+        <h2>Contact</h2>
+      </div>
+    </div>
+
+    <footer><h2>Footer</h2></footer>
+  </body>
 </html>

@@ -1,0 +1,135 @@
+
+
+/* https://creative80.com/5-color-palettes-to-use-on-your-next-design-project/ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+p,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-bottom: 0;
+}
+
+body {
+    background-image: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/criss-cross.png");
+}
+
+header {
+    background-color: #191514;
+}
+
+li {
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  height: 50px;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+}
+
+nav .nav-link {
+  text-decoration: none;
+  color: #fffbf7;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 20px;
+  transition: all 0.2s ease;
+}
+nav .nav-link:hover {
+  transform: scale(1.05);
+}
+#title {
+    color: #dd5136;
+    margin: 0 50px 0 50px;
+    font-size: 1.7em;
+}
+.wrapper {
+    width: 100vw;
+}
+
+.block {
+    width: 50%;
+    height: 800px;
+    margin: 100px auto 100px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 40px;
+    border-bottom: 4px solid rgb(172, 172, 172);
+}
+.textblock {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item {
+    background-color: #6b789a42;
+    width: 20%;
+    height: 60%;
+    margin: 8%;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #5c5c5c;
+}
+
+@media (max-width: 758px){
+    .block{
+        flex-direction: column;
+    }
+    .item {
+        width: 80%;
+    }
+}
+
+.description {
+    text-align: center;
+    color: #6b789a;
+    margin: auto;
+}
+
+.phone-img {
+    height: 50%;
+    margin: auto 40px auto 60px;
+}
+
+.phone-container {
+    text-align: center;
+    margin: auto 90px auto 50px;
+    padding-bottom: 100px;
+}
+
+.specify {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.middle-container {
+    margin: auto 50px auto 90px !important;
+}
+
+.middle-image {
+    margin: auto 60px auto 40px !important;
+    width: 40%;
+}
+
