@@ -100,7 +100,7 @@ nav .nav-link:hover {
     }
 }
 
-.description {
+.description pre{
     text-align: center;
     color: #6b789a;
     margin: auto;
@@ -119,6 +119,7 @@ nav .nav-link:hover {
 
 .specify {
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-evenly;
     margin-top: 60px;
@@ -133,3 +134,21 @@ nav .nav-link:hover {
     width: 40%;
 }
 
+.btn-confirm {
+    display: block;
+    padding: 10px 15px;
+    margin: 0 5px 5px 0;
+    border-radius: 2em;
+    border: 1px solid #8e7fb1;
+    color: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    background-color: #8e7fb1;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  }
+  
+  .btn-confirm:hover {
+    color: #8e7fb1;
+    background-color: white;
+  }
