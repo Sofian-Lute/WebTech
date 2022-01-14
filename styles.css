@@ -21,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Courier New", Courier, monospace;
+  font-variant: normal;
 }
 
 
@@ -38,7 +39,7 @@ header {
 }
 
 li {
-  font-family: "Courier New", Courier, monospace;
+  font:"Courier New", Courier, monospace, normal;
 }
 
 nav {
@@ -170,7 +171,16 @@ nav .nav-link:hover {
       flex-direction: column;
       width: 200px;
   }
-
+  #table-2 {
+      border-spacing:20px;
+      text-align: center;
+      background: content-box radial-gradient(white, rgb(190, 187, 187));
+      margin: 0 auto;
+      caption-side: top;
+  }
+  #table-2 td {
+    border: 1px solid black;
+}
   #new-item-title {
       margin: 20px 0 10px 0;
   }
@@ -217,7 +227,17 @@ nav .nav-link:hover {
     font-weight: bold;
     font-style: oblique;
 }
-
+#first-list {
+    list-style-image: url("https://www.shareicon.net/data/16x16/2015/08/25/90660_tick_512x512.png");
+    background: #6b789a;
+    padding: 10px;
+    list-style-position: inside;
+}
+#second-list {
+    list-style: upper-roman inside;
+    background:#6b789a;
+    padding: 10px;
+}
 
 @media (max-width: 758px){
     .block{
