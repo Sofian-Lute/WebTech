@@ -26,7 +26,7 @@ body {
 
 
 
-h2 {
+h2,h3 {
     text-align: center;
     margin-top: 20px;
     margin-right: 0;
@@ -36,6 +36,10 @@ h2 {
 
 header {
     background-color: #191514;
+}
+
+a:visited {
+    color: green;
 }
 
 li {
@@ -63,6 +67,11 @@ nav .nav-link {
 nav .nav-link:hover {
   transform: scale(1.05);
 }
+nav .nav-link:active {
+    transform: scale(1.05);
+    color: #dd5136;
+  }
+
 #title {
     color: #dd5136;
     margin: 0 50px 0 50px;
@@ -71,6 +80,15 @@ nav .nav-link:hover {
 .wrapper {
     width: 100vw;
 }
+
+.form-item {
+    margin: 20px auto;
+    text-align: center;
+    width: 10%;
+}
+input:focus {
+    background-color:#d3d3d3;
+  }
 
 .block {
     width: 50%;
@@ -164,6 +182,7 @@ nav .nav-link:hover {
     background-color: rgb(218, 218, 218);
     border-radius: 5px;
     min-width: 300px;
+    padding: 10px;
 }
 
   #form-table {
@@ -204,7 +223,8 @@ nav .nav-link:hover {
   }
 
  .phone-img-table {
-    height: 200px;
+    height: auto;
+    max-width: 50%;
     margin: auto 10px auto 10px;
 }
 .accessoires-img-table {
@@ -212,6 +232,7 @@ nav .nav-link:hover {
     height: auto;
     object-fit: cover;
     margin: auto 10px auto 10px;
+
 }
 
 .fit-image {
@@ -229,13 +250,13 @@ nav .nav-link:hover {
 }
 #first-list {
     list-style-image: url("https://www.shareicon.net/data/16x16/2015/08/25/90660_tick_512x512.png");
-    background: #6b789a;
+    background: #6b789a80;
     padding: 10px;
     list-style-position: inside;
 }
 #second-list {
     list-style: upper-roman inside;
-    background:#6b789a;
+    background:#6b789a80;
     padding: 10px;
 }
 
