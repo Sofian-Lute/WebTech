@@ -11,6 +11,7 @@ html {
 
 body {
     background-image: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/criss-cross.png");
+    background-repeat: repeat-y;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -25,7 +26,6 @@ body {
 }
 
 
-
 h2,h3 {
     text-align: center;
     margin-top: 20px;
@@ -37,13 +37,15 @@ h2,h3 {
 header {
     background-color: #191514;
 }
-
+a:link {
+    color: blue;
+}
 a:visited {
     color: green;
 }
 
 li {
-  font:"Courier New", Courier, monospace, normal;
+  font: 17px Courier;
 }
 
 nav {
@@ -57,6 +59,7 @@ nav {
 
 nav .nav-link {
   text-decoration: none;
+  text-indent: 50px;
   color: #fffbf7;
   font-size: 1.3em;
   font-weight: 400;
@@ -121,11 +124,14 @@ input:focus {
     text-align: center;
     color: #6b789a;
     margin: auto;
+    orphans: 2;
+    widows: 2;
 }
 
 .phone-img {
     height: 50%;
     margin: auto 40px auto 60px;
+    float: left;
 }
 
 .phone-container {
@@ -232,6 +238,7 @@ input:focus {
     height: auto;
     object-fit: cover;
     margin: auto 10px auto 10px;
+    vertical-align: middle;
 
 }
 
@@ -244,7 +251,7 @@ input:focus {
 #accessoires-listing {
     list-style-type: circle;
     list-style-position: inside;
-    font-size: relative;
+    font-size: 15px;
     font-weight: bold;
     font-style: oblique;
 }
@@ -283,6 +290,12 @@ input:focus {
         text-align: center;
         margin: auto 50px auto 50px !important;
         padding-bottom: 30px;
+    }
+    h1 {
+        page-break-before: always
+    }
+    footer {
+        page-break-after: always;
     }
 
 }
