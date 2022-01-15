@@ -43,7 +43,7 @@ nav .nav-link:active {
 }
 
 a:link {
-  color: blue;
+  color: rgb(255, 174, 82);
 }
 a:visited {
   color: green;
