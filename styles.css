@@ -103,13 +103,17 @@ li {
 #table {
   overflow-x: auto;
 }
-
 input {
-  width: 90%;
+  width: 10%;
 }
 
 input:focus {
   background-color: #d3d3d3;
+}
+
+form {
+  margin: 10px auto;
+  text-align: center;
 }
 
 .phone-img-table {
@@ -251,10 +255,10 @@ input:focus {
   margin: 0 auto;
 }
 
-#accessoires-listing {
+.accessoires-listing {
   list-style-type: circle;
   list-style-position: inside;
-  font-size: relative;
+  font-size: 15px;
   font-weight: bold;
   font-style: oblique;
 }
@@ -327,14 +331,19 @@ input:focus {
   .description {
     width: 100%;
   }
-  input {
-    width: 50px;
-  }
   #h2-table {
     text-align: left;
   }
   #table-2 {
     border-collapse: collapse;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
