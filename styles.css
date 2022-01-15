@@ -31,7 +31,6 @@ nav .nav-link {
   font-size: 1.3em;
   font-weight: 400;
   text-transform: uppercase;
-
   transition: all 0.2s ease;
 }
 nav .nav-link:hover {
@@ -43,7 +42,7 @@ nav .nav-link:active {
 }
 
 a:link {
-  color: rgb(255, 174, 82);
+  color: rgb(253, 156, 77);
 }
 a:visited {
   color: green;
