@@ -1,51 +1,19 @@
-
-
-/* https://creative80.com/5-color-palettes-to-use-on-your-next-design-project/ */
-
+/* color pallete:
+https://creative80.com/5-color-palettes-to-use-on-your-next-design-project/ */
+/* Main website items */
 html {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-}
-
-body {
-    background-image: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/criss-cross.png");
-    background-repeat: repeat-y;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-
-p,
-body {
+  scroll-behavior: smooth;
   margin: 0;
-  padding: 0;
-  font-family: "Courier New", Courier, monospace;
-  font-variant: normal;
-}
-
-
-h2,h3 {
-    text-align: center;
-    margin-top: 20px;
-    margin-right: 0;
-    margin-bottom: 20px;
-    margin-left: 0;
+  width: 100vw;
 }
 
 header {
-    background-color: #191514;
+  background-color: #191514;
 }
-a:link {
-    color: blue;
-}
-a:visited {
-    color: green;
-}
-
-li {
-  font: 17px Courier;
+#title {
+  color: #dd5136;
+  margin: 0 50px 0 50px;
+  font-size: 1.7em;
 }
 
 nav {
@@ -56,7 +24,6 @@ nav {
   text-decoration: none;
   border-bottom: 1px solid gray;
 }
-
 nav .nav-link {
   text-decoration: none;
   text-indent: 50px;
@@ -64,238 +31,321 @@ nav .nav-link {
   font-size: 1.3em;
   font-weight: 400;
   text-transform: uppercase;
-  margin-left: 20px;
+
   transition: all 0.2s ease;
 }
 nav .nav-link:hover {
   transform: scale(1.05);
 }
 nav .nav-link:active {
-    transform: scale(1.05);
-    color: #dd5136;
-  }
-
-#title {
-    color: #dd5136;
-    margin: 0 50px 0 50px;
-    font-size: 1.7em;
-}
-.wrapper {
-    width: 100vw;
+  transform: scale(1.05);
+  color: #dd5136;
 }
 
-.form-item {
-    margin: 20px auto;
-    text-align: center;
-    width: 10%;
+a:link {
+  color: blue;
 }
+a:visited {
+  color: green;
+}
+/* Start of main website styling */
+body {
+  background-image: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/criss-cross.png");
+  width: 100vw;
+  overflow-x: hidden;
+  background-repeat: repeat;
+}
+p,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-variant: normal;
+}
+h2,
+h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+pre {
+  text-align: center;
+}
+
+li {
+  font: 17px Courier;
+}
+
+/* items for tables */
+
+#table-phones {
+  border-collapse: collapse;
+  width: 80%;
+  min-width: 800px;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+#table-phones td,
+#table-phones th {
+  border: 1px solid rgb(175, 163, 163);
+  padding: 10px;
+  background-color: #fffbf7;
+  text-align: center;
+}
+
+#table-phones th {
+  background-color: #dd5136;
+  padding: 16px;
+}
+
+#table {
+  overflow-x: auto;
+}
+
+input {
+  width: 90%;
+}
+
 input:focus {
-    background-color:#d3d3d3;
-  }
+  background-color: #d3d3d3;
+}
+
+.phone-img-table {
+  height: auto;
+  max-width: 50%;
+  margin: auto 10px auto 10px;
+}
+
+#table-2 {
+  border-spacing: 20px;
+  text-align: center;
+  background: content-box
+    radial-gradient(rgb(255, 255, 255), rgb(212, 212, 212));
+  margin: 0 auto;
+  caption-side: top;
+}
+#table-2 td {
+  border: 1px solid black;
+}
+#table2 {
+  overflow-x: auto;
+}
+
+/* phone/accessoires blocks and styling */
+
+.wrapper {
+  width: 100vw;
+}
 
 .block {
-    width: 50%;
-    height: 800px;
-    margin: 100px auto 100px auto;
-    display: flex;
-    background-color: white;
-    border-radius: 40px;
-    border-bottom: 4px solid rgb(172, 172, 172);
+  width: 50%;
+  height: 800px;
+  margin: 100px auto 100px auto;
+  display: flex;
+  background-color: white;
+  border-radius: 40px;
+  border-bottom: 4px solid rgb(172, 172, 172);
 }
 .textblock {
-    width: 30%;
-    margin: 0 auto;
-    text-align: center;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .item {
-    background-color: #6b789a42;
-    width: 20%;
-    height: 60%;
-    margin: 8%;
-    padding: 20px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #5c5c5c;
+  background-color: #6b789a42;
+  width: 20%;
+  height: 60%;
+  margin: 8%;
+  padding: 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #5c5c5c;
 }
 
 .description {
-    text-align: center;
-    color: #6b789a;
-    margin: auto;
-    orphans: 2;
-    widows: 2;
+  text-align: center;
+  color: #6b789a;
+  margin: auto;
+  orphans: 2;
+  widows: 2;
 }
 
 .phone-img {
-    height: 50%;
-    margin: auto 40px auto 60px;
-    float: left;
+  height: 50%;
+  margin: auto 40px auto 60px;
+  float: left;
 }
 
 .phone-container {
-    text-align: center;
-    margin: auto 90px auto 50px;
-    padding-bottom: 100px;
+  text-align: center;
+  margin: auto 90px auto 50px;
+  padding-bottom: 100px;
 }
 
 .specify {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-top: 60px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 60px;
 }
 
 .middle-container {
-    margin: auto 50px auto 90px !important;
+  margin: auto 50px auto 90px !important;
 }
 
 .middle-image {
-    margin: auto 60px auto 40px !important;
-    width: 40%;
+  margin: auto 60px auto 40px !important;
+  width: 40%;
 }
 
 .btn-confirm {
-    display: block;
-    padding: 10px 15px;
-    margin: 0 5px 5px 0;
-    border-radius: 2em;
-    border: 1px solid #8e7fb1;
-    color: white;
-    transition: all 0.3s ease;
-    text-align: center;
-    cursor: pointer;
-    background-color: #8e7fb1;
-    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
-  }
-  
-  .btn-confirm:hover {
-    color: #8e7fb1;
-    background-color: white;
-  }
-
-  #accessoires {
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-}
-  .block-accessoires {
-    width: 20%;
-    height: 700px;
-    margin: 100px auto 100px auto;
-    background-color: rgb(218, 218, 218);
-    border-radius: 5px;
-    min-width: 300px;
-    padding: 10px;
+  display: block;
+  padding: 10px 15px;
+  margin: 0 5px 5px 0;
+  border-radius: 2em;
+  border: 1px solid #8e7fb1;
+  color: white;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  background-color: #8e7fb1;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
 }
 
-  #form-table {
-      display:flex;
-      flex-direction: column;
-      width: 200px;
-  }
-  #table-2 {
-      border-spacing:20px;
-      text-align: center;
-      background: content-box radial-gradient(white, rgb(190, 187, 187));
-      margin: 0 auto;
-      caption-side: top;
-  }
-  #table-2 td {
-    border: 1px solid black;
+.btn-confirm:hover {
+  color: #8e7fb1;
+  background-color: white;
 }
-  #new-item-title {
-      margin: 20px 0 10px 0;
-  }
 
-  #table-phones {
-      border-collapse: collapse;
-      width: 80%;
-      table-layout: fixed;
-      margin: 0 auto;
-  }
-  #table-phones td, #table-phones th {
-      border: 1px solid rgb(175, 163, 163);
-      padding: 10px;
-      background-color: #fffbf7;
-      text-align: center;
-  }
-
-  #table-phones th {
-    background-color: #dd5136;
-    padding: 16px;
-  }
-
- .phone-img-table {
-    height: auto;
-    max-width: 50%;
-    margin: auto 10px auto 10px;
+#accessoires {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
 }
+.block-accessoires {
+  width: 20%;
+
+  margin: 100px auto 100px auto;
+  background-color: rgb(218, 218, 218);
+  border-radius: 5px;
+  min-width: 300px;
+  padding: 10px;
+}
+
 .accessoires-img-table {
-    max-width: 90%;
-    height: auto;
-    object-fit: cover;
-    margin: auto 10px auto 10px;
-    vertical-align: middle;
-
+  max-width: 90%;
+  height: auto;
+  object-fit: cover;
+  margin: auto 10px auto 10px;
+  vertical-align: middle;
 }
 
 .fit-image {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
 
 #accessoires-listing {
-    list-style-type: circle;
-    list-style-position: inside;
-    font-size: 15px;
-    font-weight: bold;
-    font-style: oblique;
+  list-style-type: circle;
+  list-style-position: inside;
+  font-size: relative;
+  font-weight: bold;
+  font-style: oblique;
 }
 #first-list {
-    list-style-image: url("https://www.shareicon.net/data/16x16/2015/08/25/90660_tick_512x512.png");
-    background: #6b789a80;
-    padding: 10px;
-    list-style-position: inside;
+  list-style-image: url("https://www.shareicon.net/data/16x16/2015/08/25/90660_tick_512x512.png");
+  background: #6b789a80;
+  padding: 10px;
+  list-style-position: inside;
 }
 #second-list {
-    list-style: upper-roman inside;
-    background:#6b789a80;
-    padding: 10px;
+  list-style: upper-roman inside;
+  background: #6b789a80;
+  padding: 10px;
 }
 
-@media (max-width: 758px){
-    .block{
-        flex-direction: column;
-        width: 90%;
-        margin: 20px auto;
-    }
-    .item {
-        width: 80%;
-    }
-    .textblock {
-        width: 80%;
-    }
-    #main {
-        padding:0;
-    }
-    .phone-img, .middle-image {
-        height: 25%;
-        margin: 40px auto !important;
-    }
-    .phone-container, .middle-container {
-        text-align: center;
-        margin: auto 50px auto 50px !important;
-        padding-bottom: 30px;
-    }
-    h1 {
-        page-break-before: always
-    }
-    footer {
-        page-break-after: always;
-    }
+/* Media */
 
+@media (max-width: 1200px) {
+  nav {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .nav-link {
+    text-indent: 0;
+  }
+  .block {
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .phone-img,
+  .middle-image {
+    height: 50%;
+    margin: 40px auto !important;
+  }
+  .phone-container,
+  .middle-container {
+    width: 60%;
+    margin: 0 auto !important;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 758px) {
+  .item {
+    width: 80%;
+  }
+  .textblock {
+    width: 80%;
+  }
+
+  .phone-img,
+  .middle-image {
+    height: 25%;
+    margin: 40px auto !important;
+  }
+  .phone-container,
+  .middle-container {
+    text-align: center;
+    margin: auto !important;
+    padding-bottom: 30px;
+    width: 90%;
+  }
+
+  .block-accessoires {
+    margin: 20px 0;
+  }
+
+  .description {
+    width: 100%;
+  }
+  input {
+    width: 50px;
+  }
+  #h2-table {
+    text-align: left;
+  }
+  #table-2 {
+    border-collapse: collapse;
+  }
+}
+
+@media print {
+  h2 {
+    page-break-before: always;
+  }
+  div {
+    break-inside: avoid;
+  }
+  footer {
+    page-break-after: always;
+  }
 }

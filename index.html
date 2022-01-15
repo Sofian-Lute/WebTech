@@ -17,8 +17,9 @@
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="nav-link">Video</a>
       </nav>
     </header>
+
     <div id="main">
-      <p>Welcome to our webshop, here, you can buy:</p>
+      <p>Welcome to our <em>webshop</em>, here, you can buy:</p>
         <ul id="first-list">
           <li>Phones</li>
           <li>Cases</li>
@@ -26,11 +27,8 @@
           <li>Screen protectors</li>
         </ul>
         <p>
-          The
-          <a
-            href="https://www.mbaskool.com/fun-corner/top-brand-lists/17610-top-10-global-mobile-phone-brands.html"
-            >best</a
-          >
+          The 
+          <a href="https://www.mbaskool.com/fun-corner/top-brand-lists/17610-top-10-global-mobile-phone-brands.html"><em>best</em></a>
           sold mobile brands in 2021:
         </p>
         <ol id="second-list">
@@ -45,11 +43,13 @@
           <li>Lenovo</li>
           <li>Realme</li>
         </ol>
+
       <section>
+        <h2>Our items</h2>
         <div id="table">
           <table id="table-phones">
             <caption>
-              <h2>Recommended phones in our stock</h2>
+              <h2 id="h2-table">Recommended phones in our stock</h2>
             </caption>
             <tr>
               <th><strong>Brand</strong></th>
@@ -108,46 +108,44 @@
             <tr>
               <td colspan="5">New item</td>
             </tr>
+            <form action="https://wt.ops.labs.vu.nl/api22/9775c5a7" id="form-table" method="post">
+            <tr>
+              <td><input type="text" name="brand" id="brand" required placeholder="brand" /></td>
+              <td><input type="text" name="model" id="model" required placeholder="model"/></td>
+              <td><input type="text" name="os" id="os" required placeholder="os"/></td>
+              <td><input type="number" name="screensize" id="screensize" required placeholder="screensize"/></td>
+              <td><input type="text" name="image" id="image" placeholder="image"/></td>
+            </tr>
+            <tr>
+              <td colspan="5"><input type="submit" value="Submit" /></td>
+            </tr>
+            </form>
+          </table>
+      </section>
+
+        <div id="table2">
+            <table id="table-2">
+            <caption>
+              <strong>Good sold extra's</strong>
+            </caption>
+            <tr>
+                <th>Type</th>
+                  <th>Product</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+              <td>Case</td>
+              <td>Ipone X Black case</td>
+              <td>8.00$</td>
+            </tr>
+            <tr>
+              <td>Charger</td>
+              <td>Origenale OnePlus USB C charger</td>
+              <td>25.00$</td>
+            </tr>
           </table>
         </div>
-        <div class="form-item">
-          <h3 id="new-item-title">Add new item to the table</h3>
-          <form action="https://wt.ops.labs.vu.nl/api22/9775c5a7" id="form-table" method="post">
-            <label for="brand">Brand: </label>
-            <input type="text" name="brand" id="brand" required />
-            <label for="model">Type: </label>
-            <input type="text" name="model" id="model" required />
-            <label for="os">OS: </label>
-            <input type="text" name="os" id="os" required />
-            <label for="screensize">Screensize: </label>
-            <input type="number" name="screensize" id="screensize" required />
-            <label for="image">Picture: </label>
-            <input type="text" name="image" id="image" />
-            <input type="submit" value="Save" />
-         </form>
-        </div>
-        
-      </section>
-        <table id="table-2">
-          <caption>
-            <strong>Good sold extra's</strong>
-          </caption>
-          <tr>
-            <th>Type</th>
-            <th>Product</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>Case</td>
-            <td>Ipone X Black case</td>
-            <td>8.00$</td>
-          </tr>
-          <tr>
-            <td>Charger</td>
-            <td>Origenale OnePlus USB C charger</td>
-            <td>25.00$</td>
-          </tr>
-        </table>
+
       <div class="container">
         <div class="wrapper" id="upcoming">
           <section>
@@ -155,7 +153,7 @@
           <div class="textblock">
             <h3>NEW PHONE COMING INTO OUR STOCKS SOON</h3>
           </div>
-          <div class="block">
+          <div class="block even">
             <img
               src="https://static.iphoned.nl/orca/products/14257/apple-iphone-14-pro.jpg"
               alt="iPhone 14"
@@ -223,10 +221,10 @@
           </div>
           </section>
         </div>
+
         <section>
         <h2>Accessoires</h2>
         <div class="wrapper" id="accessoires">
-          
           <div class="block-accessoires" id="cases">
             <h3>Our cases</h3>
               <div class="fit-image"><figure><img src="https://www.mapify.cc/wp-content/uploads/Mapify-Tough-Phone-Cases-Blueprint-1.png" alt="Cases" class="accessoires-img-table">
@@ -246,6 +244,10 @@
             <div class="fit-image"><figure><img src="https://kayonline.in/wp-content/uploads/2020/10/p2-1-300x300.png" alt="Chargers" class="accessoires-img-table">
             <figcaption>Charger Types</figcaption>
             </figure>
+            <ul id="accessoires-listing">
+              <li>USB-C</li>
+              <li>Thunderbolt</li>
+            </ul>
             </div>
           </div>
           <div class="block-accessoires" id="screenprotectors">
@@ -267,15 +269,22 @@
               <dd>Sapphire instead of glass</dd>
           </dl>
           </div>
-
         </div>
+        
         </section>
+        <footer>
         <div class="wrapper" id="contact">
+          <section>
           <h2>Contact</h2>
-          <pre>If you have any questions do not hesitate to contact us</pre>
+          <pre>
+If you have any questions do 
+not hesitate to contact us
+          </pre>
+          </section>
+        
         </div>
+        </footer>
       </div>
     </div>
-    <footer><h2>Footer</h2></footer>
   </body>
 </html>
