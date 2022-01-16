@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<!-- We tested our website in google chrome and Microsoft Edge. added: internet explorer
+  In both browsers the website looked the same for the html part and the CSS part, no deformations.  added: internet explorer however does show some differences, one of them is it doesnt support transparent color.
+  For the print style we looked at how it would print by pressing ctrl + p. 
+  We placed a page-brake-befor every h2 to make sure that they would start on a new page this work really well.
+  To test different screensizes we used the screen emulator as said in zybook 5.4, we used the media queries to make sure the content fitted on all devices and we succeeded.
+  The screen emulator test was succesful, for the table with de best sold phones you need to scroll horizontaly.
+  -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,36 +26,38 @@
         >
       </nav>
     </header>
-
-    <div id="main">
-      <p>Welcome to our <em>webshop</em>, here, you can buy:</p>
-      <ul id="first-list">
-        <li>Phones</li>
-        <li>Cases</li>
-        <li>Chargers</li>
-        <li>Screen protectors</li>
-      </ul>
-      <p>
-        The
-        <a
-          href="https://www.mbaskool.com/fun-corner/top-brand-lists/17610-top-10-global-mobile-phone-brands.html"
-          ><em>best</em></a
-        >
-        sold mobile brands in 2021:
-      </p>
-      <ol id="second-list">
-        <li>Samsung</li>
-        <li>Huawei</li>
-        <li>Apple</li>
-        <li>Xiaomi</li>
-        <li>Oppo</li>
-        <li>vivo</li>
-        <li>LG</li>
-        <li>ZTE</li>
-        <li>Lenovo</li>
-        <li>Realme</li>
-      </ol>
-
+    <!-- Here starts the main stuff for the website -->
+    <div class="main">
+      <div class="site-lists">
+        <p>Welcome to our <em>webshop</em>, here, you can buy:</p>
+        <ul id="first-list">
+          <li>Phones</li>
+          <li>Cases</li>
+          <li>Chargers</li>
+          <li>Screen protectors</li>
+        </ul>
+        <p>
+          The
+          <a
+            href="https://www.mbaskool.com/fun-corner/top-brand-lists/17610-top-10-global-mobile-phone-brands.html"
+            ><em>best</em></a
+          >
+          sold mobile brands in 2021:
+        </p>
+        <ol id="second-list">
+          <li>Samsung</li>
+          <li>Huawei</li>
+          <li>Apple</li>
+          <li>Xiaomi</li>
+          <li>Oppo</li>
+          <li>vivo</li>
+          <li>LG</li>
+          <li>ZTE</li>
+          <li>Lenovo</li>
+          <li>Realme</li>
+        </ol>
+      </div>
+      <!-- Items we sell go here -->
       <section>
         <h2>Our items</h2>
         <div id="table">
@@ -171,18 +180,18 @@
           </tr>
           <tr>
             <td>Charger</td>
-            <td>Origenale OnePlus USB C charger</td>
+            <td>Original OnePlus USB C charger</td>
             <td>&euro;25.00</td>
           </tr>
         </table>
       </div>
-
+      <!-- New item containers -->
       <div class="container">
         <div class="wrapper" id="upcoming">
           <section>
             <h2>Upcoming</h2>
             <div class="textblock">
-              <h3>NEW PHONE COMING INTO OUR STOCKS SOON</h3>
+              <h3>NEWEST PHONES, COMING INTO OUR STOCKS SOON</h3>
             </div>
             <div class="block even">
               <img
@@ -252,7 +261,7 @@
             </div>
           </section>
         </div>
-
+        <!-- Here goes the new accessoires: cases,chargers,screenprotectors etc -->
         <section>
           <h2>Accessoires</h2>
           <div class="wrapper" id="accessoires">
@@ -325,6 +334,7 @@
             </div>
           </div>
         </section>
+        <!-- END SECTION -->
         <footer>
           <div class="wrapper" id="contact">
             <section>

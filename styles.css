@@ -42,7 +42,7 @@ nav .nav-link:active {
 }
 
 a:link {
-  color: rgb(253, 156, 77);
+  color: rgb(255, 139, 62);
 }
 a:visited {
   color: green;
@@ -355,5 +355,12 @@ form {
   }
   footer {
     page-break-after: always;
+  }
+  .site-lists {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
