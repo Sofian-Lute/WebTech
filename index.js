@@ -6,7 +6,13 @@ fetchData();
 $("#btnSubmit").on("click", (e) => {
     e.preventDefault();
     saveNewPhone();
-  });
+});
+$("#btnReset").on("click", (e) => {
+    $.get(`${BASE_URL}/reset`, () =>{
+        phones = [];
+        fetchData();
+    })
+});
 
 function refreshTable(){
     $("#table-phones tr:not(:first)").remove();

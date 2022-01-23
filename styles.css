@@ -87,11 +87,16 @@ li {
   margin: 0 auto;
 }
 #table-phones td,
-#table-phones th {
+#table-phones th,
+.table-img {
   border: 1px solid rgb(175, 163, 163);
   padding: 10px;
   background-color: #fffbf7;
   text-align: center;
+}
+
+#table-phones tr {
+  cursor: pointer;
 }
 
 #table-phones th {
@@ -363,4 +368,10 @@ form {
     justify-content: center;
     align-items: center;
   }
+}
+#btnContainer {
+  margin: 20px 0 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
