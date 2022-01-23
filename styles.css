@@ -95,7 +95,7 @@ li {
   text-align: center;
 }
 
-#table-phones tr {
+.table-header {
   cursor: pointer;
 }
 
@@ -126,7 +126,7 @@ form {
   margin: auto 10px auto 10px;
 }
 
-#table-2 {
+#table-products {
   border-spacing: 20px;
   text-align: center;
   background: content-box
@@ -134,7 +134,7 @@ form {
   margin: 0 auto;
   caption-side: top;
 }
-#table-2 td {
+#table-products td {
   border: 1px solid black;
 }
 #table2 {
@@ -338,7 +338,7 @@ form {
   #h2-table {
     text-align: left;
   }
-  #table-2 {
+  #table-products {
     border-collapse: collapse;
   }
   form {
