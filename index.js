@@ -17,10 +17,11 @@ let products = [{
     price: 14.25,
   }
 ];
-
+//On start-up: refresh the tables and get data from API
 refreshProducts();
 fetchData();
 
+//Main buttons on the front: Submit and Reset data
 $("#btnSubmit").on("click", (e) => {
     e.preventDefault();
     saveNewPhone();
@@ -51,7 +52,11 @@ let isAscendingBrand = true;
 let isAscendingModel = true;
 let isAscendingOs = true;
 let isAscendingScreensize = true;
-
+/** 
+ * @parameter (type) is for getting the clicked button type
+ * @parameter (isProduct) is for the second table to determine which table is begin sorted
+ * isAscending... to adjust between ascending and descending
+ */
 function sortTable(type, isProduct = false){
     switch(type){
         case "brand":
@@ -95,7 +100,11 @@ function sortTable(type, isProduct = false){
 const ascending = (a,b) => a > b ? -1 : 1;
 const descending = (a,b) => a > b ? 1 : -1;
 
-
+/** 
+* REFRESH THE TABLES
+* found how to skip first row on:
+* https://stackoverflow.com/questions/370013/jquery-delete-all-table-rows-except-first
+*/
 function refreshTable(){
     $("#table-phones tr:not(:first)").remove();
     phones.forEach(phone => {
@@ -112,6 +121,7 @@ function refreshProducts(){
     });
 }
 
+//Save new data, push to API and refresh the table(add to table)
 function saveNewPhone(){
     const brand = capitalize($("#brand").val());
     const model = capitalize($("#model").val());
@@ -127,6 +137,7 @@ function saveNewPhone(){
     });
 }
 
+//Get data from API and refresh the table with new content if there is new content
 function fetchData(){
     $.get(BASE_URL, (data) => {
         data.forEach(phone => {
@@ -135,7 +146,9 @@ function fetchData(){
         refreshTable();
     });
 }
+
 // capitalize the input string
+// https://www.w3schools.com/java/ref_string_touppercase.asp
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 // Clears the input fields
