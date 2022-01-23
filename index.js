@@ -26,7 +26,8 @@ $("#btnSubmit").on("click", (e) => {
     saveNewPhone();
     clearFields();
 });
-$("#btnReset").on("click", (e) => {
+
+$("#btnReset").on("click", () => {
     $.get(`${BASE_URL}/reset`, () =>{
         phones = [];
         fetchData();
@@ -46,19 +47,32 @@ $("#btnProduct").on("click", () => sortTable("product", true));
 $("#btnPrice").on("click", () => sortTable("price", true));
 
 //SORTER of both tables
+let isAscendingBrand = true;
+let isAscendingModel = true;
+let isAscendingOs = true;
+let isAscendingScreensize = true;
+
 function sortTable(type, isProduct = false){
     switch(type){
         case "brand":
-            phones.sort((a, b) => ascending(a.brand, b.brand));
+            phones.sort((a, b) => isAscendingBrand ? 
+            ascending(a.brand, b.brand):descending(a.brand, b.brand));
+            isAscendingBrand = !isAscendingBrand;
             break;
         case "model":
-            phones.sort((a, b) => ascending(a.model, b.model));
+            phones.sort((a, b) => isAscendingModel ? 
+            ascending(a.model, b.model):descending(a.model, b.model));
+            isAscendingModel = !isAscendingModel;
             break;
         case "os":
-            phones.sort((a, b) => ascending(a.os, b.os));
+            phones.sort((a, b) => isAscendingOs ? 
+            ascending(a.os, b.os):descending(a.os, b.os));
+            isAscendingOs = !isAscendingOs;
             break;
         case "screensize": 
-            phones.sort((a, b) => ascending(a.screensize, b.screensize));
+            phones.sort((a, b) => isAscendingScreensize ? 
+            ascending(a.screensize, b.screensize):descending(a.screensize, b.screensize));
+            isAscendingScreensize = !isAscendingScreensize;
             break;
         case "type":
             products.sort((a, b) => ascending(a.type, b.type));
@@ -78,9 +92,9 @@ function sortTable(type, isProduct = false){
     else refreshProducts();
 }
     
-function ascending(a, b){
-    return a > b ? 1 : -1;
-}
+const ascending = (a,b) => a > b ? -1 : 1;
+const descending = (a,b) => a > b ? 1 : -1;
+
 
 function refreshTable(){
     $("#table-phones tr:not(:first)").remove();
