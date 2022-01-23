@@ -1,9 +1,20 @@
-const btnReset = document.getElementById("btnReset");
+const BASE_URL = "https://wt.ops.labs.vu.nl/api22/ca8317f0";
 
-btnReset.addEventListener("click", (e) => {
+$("#btnSubmit").on("click", (e)=> {
     e.preventDefault();
-    $.get("https://wt.ops.labs.vu.nl/api22/9775c5a7/reset", data => {
-        console.log(data.Success);
-        alert(data.Success);
-    });
+    saveNewPhone();
 });
+
+function saveNewPhone(){
+    const brand = $("#btnBrand").val();
+    const model = $("#btnModel").val();
+    const os = $("#btnOs").val();
+    const screensize = $("#btnScreensize").val();
+    const image = $("#btnImage").va();
+
+    const phone = {brand, model, os, screensize, image};
+
+    $.post(BASE_URL, phone, data => {
+        console.log(data);
+    })
+}

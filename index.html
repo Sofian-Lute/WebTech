@@ -65,105 +65,50 @@
             <caption>
               <h2 id="h2-table">Recommended phones in our stock</h2>
             </caption>
-            <tr>
-              <th><strong>Brand</strong></th>
-              <th><strong>Model</strong></th>
-              <th>
+            <tr id="table=header">
+              <th id="btnBrand"><strong>Brand</strong></th>
+              <th id="btnModel"><strong>Model</strong></th>
+              <th id="btnOs">
                 <strong><abbr title="Operating system">OS</abbr></strong>
               </th>
-              <th><strong>Screensize (in inches)</strong></th>
-              <th><strong>Image</strong></th>
-            </tr>
-            <tr>
-              <td>Apple</td>
-              <td>Iphone 13</td>
-              <td>IoS</td>
-              <td>6.1</td>
-              <td>
-                <img
-                  src="https://image.coolblue.nl/max/500x500/products/1630932"
-                  alt="iPhone 13"
-                  class="phone-img-table"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Apple</td>
-              <td>Iphone X</td>
-              <td>IoS</td>
-              <td>5.85</td>
-              <td>
-                <img
-                  src="https://tweakers.net/ext/i/2002468080.jpeg"
-                  alt="iPhone X"
-                  class="phone-img-table"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Samsung</td>
-              <td>Galaxy S21</td>
-              <td>Android</td>
-              <td>6.2</td>
-              <td>
-                <img
-                  src="https://image.coolblue.nl/max/500x500/products/1526846"
-                  alt="Galaxy S21"
-                  class="phone-img-table"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>OnePlus</td>
-              <td>9</td>
-              <td>Android</td>
-              <td>6.55</td>
-              <td>
-                <img
-                  src="https://image.coolblue.nl/max/500x500/products/1556449"
-                  alt="OnePlus 9"
-                  class="phone-img-table"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>Nokia</td>
-              <td>X20</td>
-              <td>Android</td>
-              <td>6.67</td>
-              <td>
-                <img
-                  src="https://image.coolblue.nl/max/500x500/products/1565392"
-                  alt="Nokia X20"
-                  class="phone-img-table"
-                />
-              </td>
-            </tr>
-            <tr>
-              <td colspan="5">New item</td>
+              <th id="btnScreensize">
+                <strong>Screensize (in inches)</strong>
+              </th>
+              <th id="btnImage"><strong>Image</strong></th>
             </tr>
           </table>
         </div>
       </section>
-      <form
-        action="https://wt.ops.labs.vu.nl/api22/9775c5a7"
-        id="form-table"
-        method="post"
-      >
-        <label for="brand">Brand: </label>
-        <input type="text" name="brand" id="brand" required />
-        <label for="model">Type: </label>
-        <input type="text" name="model" id="model" required />
-        <label for="os">OS: </label>
-        <input type="text" name="os" id="os" required />
-        <label for="screensize">Screensize: </label>
-        <input type="number" name="screensize" id="screensize" required />
-        <label for="image">Picture: </label>
-        <input type="text" name="image" id="image" />
-        <input type="submit" value="Save" />
+      <form id="form-table">
+        <input
+          type="text"
+          name="brand"
+          id="brand"
+          placeholder="brand"
+          required
+        />
+        <input
+          type="text"
+          name="model"
+          id="model"
+          placeholder="model"
+          required
+        />
+        <input type="text" name="os" id="os" placeholder="os" required />
+        <input
+          type="number"
+          name="screensize"
+          id="screensize"
+          placeholder="screenSize"
+          min="1"
+          required
+        />
+        <input type="text" name="image" id="image" placeholder="image" />
+        <input type="submit" value="Save" id="btnSumbit" />
       </form>
-      <button class="btn-confirm" id="btnReset">Reset</button>
-
+      <div id="btnContainer">
+        <button id="btnReset" class="btn-confirm">Reset</button>
+      </div>
       <div id="table2">
         <table id="table-2">
           <caption>
@@ -350,7 +295,8 @@ not hesitate to contact us
         </footer>
       </div>
     </div>
-    <script src="./index.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
