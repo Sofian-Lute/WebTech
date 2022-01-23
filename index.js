@@ -14,9 +14,39 @@ $("#btnReset").on("click", (e) => {
     })
 });
 
+$("#btnBrand").on("click", () => sortTable("brand"));
+$("#btnModel").on("click", () => sortTable("model"));
+$("#btnOs").on("click", () => sortTable("os"));
+$("#btnScreensize").on("click", () => sortTable("screensize"));
+$("#btnImage").on("click", () => sortTable("image"));
+
+function sortTable(type){
+    switch(type){
+        case "brand":
+            phones.sort((a, b) => ascending(a.brand, b.brand));
+            break;
+        case "model":
+            phones.sort((a, b) => ascending(a.model, b.model));
+            break;
+        case "os":
+            phones.sort((a, b) => ascending(a.os, b.os));
+            break;
+        case "screensize": 
+            phones.sort((a, b) => ascending(a.screensize, b.screensize));
+            break;
+        default:
+            phones.sort((a, b) => ascending(a.brand, b.brand));
+            break;
+    }
+    refreshTable();
+}
+
+function ascending(a, b){
+    return a > b ? 1 : -1;
+}
+
 function refreshTable(){
     $("#table-phones tr:not(:first)").remove();
-    console.log(phones.length);
     phones.forEach(phone => {
         const row = `<tr><td>${phone.brand}</td><td>${phone.model}</td><td>${phone.os}</td><td>${phone.screensize}</td><td><img src="${phone.image}" class="phone-img-table"/></td></tr>`;
         $("#table-phones").append(row);
