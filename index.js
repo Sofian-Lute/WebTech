@@ -6,6 +6,7 @@ fetchData();
 $("#btnSubmit").on("click", (e) => {
     e.preventDefault();
     saveNewPhone();
+    clearFields();
 });
 $("#btnReset").on("click", (e) => {
     $.get(`${BASE_URL}/reset`, () =>{
@@ -54,9 +55,9 @@ function refreshTable(){
 }
 
 function saveNewPhone(){
-    const brand = $("#brand").val();
-    const model = $("#model").val();
-    const os = $("#os").val();
+    const brand = capitalize($("#brand").val());
+    const model = capitalize($("#model").val());
+    const os = capitalize($("#os").val());
     const screensize = parseFloat($("#screensize").val());
     const image = $("#image").val();
 
@@ -76,3 +77,14 @@ function fetchData(){
         refreshTable();
     });
 }
+// capitalize the input string
+const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
+// Clears the input fields
+const clearFields = () => {
+  $("#brand").val("");
+  $("#model").val("");
+  $("#os").val("");
+  $("#screensize").val("");
+  $("#image").val("");
+};
