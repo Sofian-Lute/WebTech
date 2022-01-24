@@ -158,6 +158,8 @@ function fetchData() {
         brand: capitalize(phone.brand),
         model: capitalize(phone.model),
         os: capitalize(phone.os),
+        screensize: phone.screensize,
+        image: phone.image,
       });
     });
     refreshTable();
