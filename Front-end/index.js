@@ -1,5 +1,6 @@
-const BASE_URL = "https://wt.ops.labs.vu.nl/api22/ca8317f0";
+const BASE_URL = "http://localhost:3000/api/phones";
 
+let activeId = 0;
 let phones = [];
 let products = [
   {
@@ -44,10 +45,21 @@ $(document).ready(function () {
   });
 
   $("#btnReset").on("click", () => {
-    $.get(`${BASE_URL}/reset`, () => {
-      phones = [];
-      fetchData();
+    $.ajax({
+      url: `${BASE_URL}/reset`,
+      type: "DELETE",
+      success: function (result) {
+        phones = [];
+        refreshTable();
+      },
     });
+  });
+
+  $("#btnDelete").on("click", () => {
+    deletePhone();
+  });
+  $("#btnUpdate").on("click", () => {
+    updatePhone();
   });
 
   //Click-listeners for main table (phones table)
@@ -126,9 +138,33 @@ $(document).ready(function () {
   function refreshTable() {
     $("#table-phones tr:not(:first)").remove();
     phones.forEach((phone) => {
-      const row = `<tr><td>${phone.brand}</td><td>${phone.model}</td><td>${phone.os}</td><td>${phone.screensize}</td><td><img src="${phone.image}" class="phone-img-table"/></td></tr>`;
+      const row = `<tr id="${phone.id}" class="phone-from-table"><td>${phone.brand}</td><td>${phone.model}</td><td>${phone.os}</td><td>${phone.screensize}</td><td><img src="${phone.image}" class="phone-img-table"/></td></tr>`;
       $("#table-phones").append(row);
     });
+
+    // When clicking on a row, set the active id equal to the clicked phone id is given
+    // and the row itself is given a lightgray color
+    $(".phone-from-table").each(function (i, phone) {
+      $(`#${phone.id}`).on("click", () => {
+        resetColor();
+        activeId = phone.id;
+        $(`#${phone.id} > td`).css("background-color", "lightgray");
+        if (activeId) {
+          const phone = phones.find((x) => x.id == activeId);
+          if (phone) {
+            $("#brand").val(phone.brand);
+            $("#model").val(phone.model);
+            $("#os").val(phone.os);
+            $("#screensize").val(phone.screensize);
+            $("#image").val(phone.image);
+          }
+        }
+      });
+    });
+  }
+  // set color of table to white
+  function resetColor() {
+    $(`#${activeId} > td`).css("background-color", "white");
   }
 
   function refreshProducts() {
@@ -148,14 +184,16 @@ $(document).ready(function () {
     const image = $("#image").val();
 
     if (brand && model && os && screensize) {
-      const phone = { brand, model, os, screensize, image };
-
+      let phone = { brand, model, os, screensize, image };
       $.ajax({
         url: BASE_URL,
         type: "POST",
-        data: phone,
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(phone),
         dataType: "json",
-        success: function () {
+        success: function (data) {
+          const ids = phones.map((x) => x.id).sort((a, b) => a - b); //Sort the phone id's
+          phone.id = ids[ids.length - 1] + 1; //Set new phone's id to the highest id in the array + 1
           phones.push(phone);
           refreshTable();
           clearFields();
@@ -169,9 +207,11 @@ $(document).ready(function () {
   // Get data from API and refresh the table with new content if there is new content
   // We capitalize the first letter using capitalize() so we can sort easier
   function fetchData() {
+    phones = [];
     $.get(BASE_URL, (data) => {
       data.forEach((phone) => {
         phones.push({
+          id: phone.id,
           brand: capitalize(phone.brand),
           model: capitalize(phone.model),
           os: capitalize(phone.os),
@@ -181,6 +221,45 @@ $(document).ready(function () {
       });
       refreshTable();
     });
+  }
+  // delete the phone with the active id
+  function deletePhone() {
+    if (activeId) {
+      $.ajax({
+        url: `${BASE_URL}/${activeId}`,
+        type: "DELETE",
+        success: function (result) {
+          fetchData();
+          activeId = 0;
+        },
+      });
+    } else {
+      alert("Please click on a row!");
+    }
+  }
+
+  // update the phone with active id
+  function updatePhone() {
+    if (activeId) {
+      const brand = capitalize($("#brand").val());
+      const model = capitalize($("#model").val());
+      const os = capitalize($("#os").val());
+      const screensize = Math.round($("#screensize").val());
+      const image = $("#image").val();
+      let phone = { brand, model, os, screensize, image };
+      $.ajax({
+        url: `${BASE_URL}/${activeId}`,
+        type: "PUT",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(phone),
+        success: function (result) {
+          fetchData();
+          activeId = 0;
+        },
+      });
+    } else {
+      alert("Please click on a row!");
+    }
   }
 
   // Clears the input fields

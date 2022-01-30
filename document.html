@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <p>
+      REST is an architectural style that describes how various components
+      interact in a distributed hypermedia system
+    </p>
+    <p>
+      RESTful web APIs typically use four of the HTTP request verbs to implement
+      CRUD operations: post, get, put and delete
+    </p>
+
+    <p>All operations are idempotent, only put and delete are not safe.</p>
+    <h1>Create</h1>
+    <p>
+      <em
+        >By create we mean that we add data for a new product item (into the
+        database)</em
+      >
+    </p>
+    <dl>
+      <dt><strong>POST</strong> api/phones</dt>
+      <br />
+      <dd>
+        - To create a new phone and save it to the database, you can do a
+        request to the route: api/phones
+      </dd>
+      <dd>
+        - The post request is done to the route api/phones and it requests that
+        the web server accepts the data in the body of the request message
+      </dd>
+      <dd>
+        - To ceate a new phone, we need the following data in the form of Json:
+        brand, model, os, screensize and image. Keep in mind that screensize is
+        a number!
+      </dd>
+      <dd>
+        - Example data to send as input: { "brand": "Samsung", "model": "galaxy
+        3", "os": "android", "screensize": 4, "image":
+        "www.google.com/random-image"}
+      </dd>
+      <dd>
+        - As a response, you get an object with the message succes or the the
+        error if one occured.
+      </dd>
+      <dd>
+        - When creating a new row in a table with the form we send the data in
+        json format, if the table row is created succesfully status code 201 is
+        sent out.
+      </dd>
+      <br />
+      <dt><strong>Responses:</strong></dt>
+      <dt>Example output: {message: "Sucesfully added the phone!"}</dt>
+      <dt>Code Success</dt>
+      <dd>
+        - Code 201 Created: we have created the new item to the database, in
+        return we could get a success message
+      </dd>
+      <br />
+      <dt>Code Error</dt>
+      <dd>
+        - Code 400: we have made a bad request, for example, we forgot to add
+        the screensize or the screensize is not a number
+      </dd>
+      <dd>- Code 500: something went wrong on the back-end</dd>
+      <br />
+      <dt>Content format: application/json</dt>
+    </dl>
+
+    <h1>Retrieve</h1>
+    <p>
+      <em
+        >By retrieve we mean that we list the data of a specific item (from the
+        database)</em
+      >
+    </p>
+    <dl>
+      <dt><strong>GET</strong> api/phones</dt>
+      <dt><strong>GET</strong> api/phones/:id</dt>
+      <br />
+      <dd>
+        - To get data from the server, you can do a request to the uri's above.
+        The first one returns all the phones available as an array. The second
+        one will give you ONE specific item as an object.
+      </dd>
+      <dd>
+        - Example data to retrieve as output (from one specific item): {
+        "brand": "Samsung", "model": "galaxy 3", "os": "android", "screensize":
+        4, "image": "www.google.com/random-image"}
+      </dd>
+      <dd>
+        - In the second route, you can see that the path contains :id. This
+        means that you need to give an id in the parameters. An example would be
+        the id 2. To get a phone from the database with id 2, you need to do the
+        request to '/api/phones/2'
+      </dd>
+      <dd>
+        - To show the newly created table row we sent a GET request in json. If
+        the data for the row is succesfully retrieved status code 200 is send
+        out.
+      </dd>
+      <br />
+      <dt><strong>Response</strong></dt>
+      <dt>
+        Example output: [{example phone object}, {example phone object 2}] =>
+        object as in all the fields like model and os
+      </dt>
+      <dt>Code Success</dt>
+      <dd>
+        - Code 200 OK: we succesfully retrieved the items(s)
+      </dd>
+      <br />
+      <dt>Code Error</dt>
+      <dd>
+        - Code 404 Not Found: there is no existing item with the requested id
+      </dd>
+      <dd>- Code 500: something went wrong on the back-end</dd>
+      <br />
+      <dt>Content format: application/json</dt>
+    </dl>
+
+    <h1>Update</h1>
+    <p>
+      <em
+        >By update we mean that we change the data of a specific item that
+        already exists (from the database)</em
+      >
+    </p>
+    <dl>
+      <dt><strong>PUT</strong> api/phones/:id</dt>
+      <br />
+      <dd>
+        - The put request is done to the route api/phones/:id and it requests
+        that the server web accepts our new data in the body of the request and
+        puts this new data instead of the old data (into the database)
+      </dd>
+      <dd>
+        - To update the phone with for example id=2 as input you need to do your
+        request to /api/phones/2
+      </dd>
+      <dd>
+        - To update the phone, just give the new values as an input object. For
+        example: { "brand": "Apple", "model": "Iphone X", "os": "IOS",
+        "screensize": 4, "image": "www.google.com/random-image"} -> the one we
+        created above is now updated
+      </dd>
+      <dd>
+        - To show the new updated row we sent a put request in json. The body
+        contains the message. If the data for the row is succesfully updated
+        status code 204 is sent out.
+      </dd>
+      <dd>
+        - The put call must be used with caution since it's not safe.
+      </dd>
+      <br />
+      <dt><strong>Responses</strong></dt>
+      <dt>Example output: {message: "Succesfully updated!"}</dt>
+      <dt>Code success</dt>
+      <dd>- Code 204 No Content: succesfully updated the item</dd>
+      <br />
+      <dt>Code error</dt>
+      <dd>
+        - Code 400: we have made a bad request, for example, the screensize is
+        not a number
+      </dd>
+      <dd>
+        - Code 404 Not Found: there is no existing item with the requested id
+      </dd>
+      <dd>- Code 500: something went wrong on the back-end</dd>
+      <br />
+      <dt>Content format: application/json</dt>
+    </dl>
+
+    <h1>Delete</h1>
+    <p>
+      <em>By delete we delete a specific item (from the database)</em>
+    </p>
+    <p></p>
+    <dl>
+      <dt><strong>DELETE</strong> /api/phones/reset</dt>
+      <dt><strong>DELETE</strong> /api/phones/:id</dt>
+      <dd>
+        - The delete request is done to the route api/phones/:id and it requests
+        that the server web deletes a certain item from (from the database)
+      </dd>
+      <dd>
+        - To delete the phone with for example id=2 as input you need to do your
+        request to /api/phones/2
+      </dd>
+      <dd>
+        - The delete call must be used with caution since it's not safe.
+        Especially to /reset
+      </dd>
+      <br />
+      <dt><strong>Responses</strong></dt>
+      <dt>
+        Example output: {message: "Sucesfully deleted the phone with id 2!"}
+      </dt>
+      <dt>Code Success</dt>
+      <dd>- Code 204 No Content: succesfully deleted the item</dd>
+      <br />
+      <dt>Code Error</dt>
+      <dd>
+        - Code 400: error occured
+      </dd>
+      <dd>
+        - Code 404 Not Found: there is no existing item with the requested id
+      </dd>
+      <dd>- Code 500: something went wrong on the back-end</dd>
+      <br />
+      <dt>Content format: application/json</dt>
+      <dd>
+        - We could get back a message confirming we succesfully deleted the item
+        in json
+      </dd>
+    </dl>
+  </body>
+</html>

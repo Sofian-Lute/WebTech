@@ -99,6 +99,10 @@ li {
   cursor: pointer;
 }
 
+.active-id {
+  background-color: green !important;
+}
+
 #table-phones th {
   background-color: #dd5136;
   padding: 16px;
