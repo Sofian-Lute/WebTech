@@ -6,3 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>self-evaluation</title>
   </head>
+  <body>
+    <header>
+      date of the evaluation: 31-01-2022<br>
+      group number: 145<br>
+      author names: Sofian Lute & 
+    </header>
+    <p>Introduction:<br>
+       
+    </p>
+    <p>Accessibility highlights:<br>
+
+    </p>
+    <p>Improvement plan:<br>
+      
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Appendix A</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th>Appendix B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
