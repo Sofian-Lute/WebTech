@@ -372,6 +372,9 @@ form {
     justify-content: center;
     align-items: center;
   }
+  .nav-link {
+      display: none;
+  }
 }
 #btnContainer {
   margin: 20px 0 50px 0;
