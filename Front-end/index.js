@@ -138,7 +138,7 @@ $(document).ready(function () {
   function refreshTable() {
     $("#table-phones tr:not(:first)").remove();
     phones.forEach((phone) => {
-      const row = `<tr id="${phone.id}" class="phone-from-table"><td>${phone.brand}</td><td>${phone.model}</td><td>${phone.os}</td><td>${phone.screensize}</td><td><img src="${phone.image}" class="phone-img-table"/></td></tr>`;
+      const row = `<tr id="${phone.id}" class="phone-from-table"><td>${phone.brand}</td><td>${phone.model}</td><td>${phone.os}</td><td>${phone.screensize}</td><td><img src="${phone.image}" alt="${phone.brand} - ${phone.model}" class="phone-img-table"/></td></tr>`;
       $("#table-phones").append(row);
     });
 
