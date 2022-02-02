@@ -7,9 +7,16 @@ html {
   width: 100vw;
 }
 
+p,
+h2,
+caption {
+  color: white;
+}
+
 header {
   background-color: #191514;
 }
+
 #title {
   color: #dd5136;
   margin: 0 50px 0 50px;
@@ -24,6 +31,7 @@ nav {
   text-decoration: none;
   border-bottom: 1px solid gray;
 }
+
 nav .nav-link {
   text-indent: 50px;
   color: #fffbf7;
@@ -32,9 +40,11 @@ nav .nav-link {
   text-transform: uppercase;
   transition: all 0.2s ease;
 }
+
 nav .nav-link:hover {
   transform: scale(1.05);
 }
+
 nav .nav-link:active {
   transform: scale(1.05);
   color: #dd5136;
@@ -43,17 +53,19 @@ nav .nav-link:active {
 a:link {
   color: rgb(255, 139, 62);
 }
+
 a:visited {
   color: green;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
+
 /* Start of main website styling */
 body {
-  background-image: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/criss-cross.png");
+  background-color: #4f4f4f;
   width: 100vw;
-  overflow-x: hidden;
-  background-repeat: repeat;
+  overflow-x: hidden !important;
 }
+
 p,
 body {
   margin: 0;
@@ -61,6 +73,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-variant: normal;
 }
+
 h2,
 h3 {
   text-align: center;
@@ -69,16 +82,16 @@ h3 {
   margin-bottom: 20px;
   margin-left: 0;
 }
+
 pre {
   text-align: center;
 }
 
 li {
-  font: 17px Courier;
+  font: 1.3em Courier;
 }
 
 /* items for tables */
-
 #table-phones {
   border-collapse: collapse;
   width: 80%;
@@ -86,6 +99,7 @@ li {
   table-layout: fixed;
   margin: 0 auto;
 }
+
 #table-phones td,
 #table-phones th,
 .table-img {
@@ -138,15 +152,16 @@ form {
   margin: 0 auto;
   caption-side: top;
 }
+
 #table-products td {
   border: 1px solid black;
 }
+
 #table2 {
   overflow-x: auto;
 }
 
 /* phone/accessoires blocks and styling */
-
 .wrapper {
   width: 100vw;
 }
@@ -160,6 +175,7 @@ form {
   border-radius: 40px;
   border-bottom: 4px solid rgb(172, 172, 172);
 }
+
 .textblock {
   width: 30%;
   margin: 0 auto;
@@ -180,10 +196,11 @@ form {
 
 .description {
   text-align: center;
-  color: #6b789a;
+  color: #111216;
   margin: auto;
   orphans: 2;
   widows: 2;
+  font-size: 1.1em;
 }
 
 .phone-img {
@@ -243,7 +260,7 @@ form {
   width: 20%;
 
   margin: 100px auto 100px auto;
-  background-color: rgb(218, 218, 218);
+  background-color: #e25050;
   border-radius: 5px;
   min-width: 300px;
   padding: 10px;
@@ -266,19 +283,19 @@ form {
 .accessoires-listing {
   list-style-type: circle;
   list-style-position: inside;
-  font-size: 15px;
+  font-size: 1.3em;
   font-weight: bold;
   font-style: oblique;
 }
 #first-list {
   list-style-image: url("https://www.shareicon.net/data/16x16/2015/08/25/90660_tick_512x512.png");
-  background: #6b789a80;
+  background: white;
   padding: 10px;
   list-style-position: inside;
 }
 #second-list {
   list-style: upper-roman inside;
-  background: #6b789a80;
+  background: white;
   padding: 10px;
 }
 
@@ -290,19 +307,23 @@ form {
     flex-direction: column;
     align-items: center;
   }
+
   nav .nav-link {
     text-indent: 0;
   }
+
   .block {
     flex-direction: column;
     width: 90%;
     margin: 20px auto;
   }
+
   .phone-img,
   .middle-image {
     height: 50%;
     margin: 40px auto !important;
   }
+
   .phone-container,
   .middle-container {
     width: 60%;
@@ -315,6 +336,7 @@ form {
   .item {
     width: 80%;
   }
+
   .textblock {
     width: 80%;
   }
@@ -324,6 +346,7 @@ form {
     height: 25%;
     margin: 40px auto !important;
   }
+
   .phone-container,
   .middle-container {
     text-align: center;
@@ -339,16 +362,20 @@ form {
   .description {
     width: 100%;
   }
+
   #h2-table {
     text-align: left;
   }
+
   #table-products {
     border-collapse: collapse;
   }
+
   form {
     display: flex;
     flex-direction: column;
   }
+
   input {
     width: 50%;
     margin: 0 auto;
@@ -359,12 +386,15 @@ form {
   h2 {
     page-break-before: always;
   }
+
   div {
     break-inside: avoid;
   }
+
   footer {
     page-break-after: always;
   }
+
   .site-lists {
     height: 100vh;
     display: flex;
@@ -372,10 +402,12 @@ form {
     justify-content: center;
     align-items: center;
   }
+
   .nav-link {
-      display: none;
+    display: none;
   }
 }
+
 #btnContainer {
   margin: 20px 0 50px 0;
   width: 100%;
