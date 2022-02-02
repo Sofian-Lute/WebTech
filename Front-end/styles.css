@@ -25,7 +25,6 @@ nav {
   border-bottom: 1px solid gray;
 }
 nav .nav-link {
-  text-decoration: none;
   text-indent: 50px;
   color: #fffbf7;
   font-size: 1.3em;
@@ -46,6 +45,7 @@ a:link {
 }
 a:visited {
   color: green;
+  text-decoration: underline; 
 }
 /* Start of main website styling */
 body {
